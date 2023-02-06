@@ -12,6 +12,13 @@ public class Resource {
     }
 
     public void substractAmount(double substracted) {
-        this.weight -= substracted;
+        try {
+            if (this.weight - substracted < 0) {
+                throw new ArithmeticException("Insufficient resource");
+            }
+            this.weight -= substracted;
+        } catch (ArithmeticException ex) {
+            System.out.println(ex);
+        }
     }
 }
