@@ -8,7 +8,7 @@ public abstract class Block {
         this.weight = w;
     }
 
-    public Block(ResourceType type1, ResourceType type2) {
+    public Block(Resource resource1, Resource resource2) {
         this.type = ResourceType.HOUSE;
         this.weight = Const.woodUnitWeight * Const.woodBlockNeeded;
         this.weight += Const.stoneUnitWeight * Const.stoneBlockNeeded;

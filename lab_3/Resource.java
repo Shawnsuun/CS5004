@@ -21,4 +21,12 @@ public class Resource {
             System.out.println(ex);
         }
     }
+
+    public ResourceType getType() {
+        return this.type;
+    }
+
+    public double getAmount() {
+        return this.weight;
+    }
 }
