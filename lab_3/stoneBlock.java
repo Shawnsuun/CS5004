@@ -7,7 +7,8 @@ public class stoneBlock extends Block {
         super(t, w);
     }
 
-    private Resource breakBlock() {
+    @Override
+    public Resource breakBlock() {
         return new Resource(Const.stoneUnitWeight, ResourceType.STONE);
     }
 }

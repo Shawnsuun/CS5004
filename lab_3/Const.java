@@ -1,6 +1,6 @@
 public class Const {
-    static final double woodUnitWeight = 500.25;
-    static final double stoneUnitWeight = 2700.36;
-    static final int woodBlockNeeded = 500;
-    static final int stoneBlockNeeded = 1000;
+    static final double woodUnitWeight = 0.5;
+    static final double stoneUnitWeight = 2.7;
+    static final int woodBlockNeeded = 1;
+    static final int stoneBlockNeeded = 2;
 }

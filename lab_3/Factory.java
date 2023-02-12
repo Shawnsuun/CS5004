@@ -1,8 +1,8 @@
 public interface Factory {
 
-    public void takeResource(Resource resource);
+    public void takeResource(Object resource);
 
-    public Block produceBlock();
+    public Block produce();
 
     public void displayInventory();
 

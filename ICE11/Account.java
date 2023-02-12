@@ -41,6 +41,5 @@ public abstract class Account
 	public String getAddress() {return address;}
 
 
-	public void accumInterest() {
-	}
+	public abstract void accumInterest();
 }

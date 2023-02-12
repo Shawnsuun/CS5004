@@ -1,4 +1,6 @@
 public class houseBlock extends Block {
+    int woodBlocks;
+    int stoneBlocks;
 
     public houseBlock(Resource r1, Resource r2) {
         super(r1, r2);
@@ -12,10 +14,10 @@ public class houseBlock extends Block {
         } catch (IllegalArgumentException ex) {
             System.out.println(ex);
         }
-
     }
 
-    private Resource breakBlock() {
+    @Override
+    public Resource breakBlock() {
         return new Resource(Const.stoneBlockNeeded, ResourceType.STONE);
     }
 }

@@ -8,7 +8,8 @@ public class woodBlock extends Block {
         super(t, w);
     }
 
-    private Resource breakBlock() {
+    @Override
+    public Resource breakBlock() {
         return new Resource(0.5 * Const.woodUnitWeight, ResourceType.WOOD);
     }
 }
