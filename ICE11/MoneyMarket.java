@@ -33,11 +33,4 @@ public class MoneyMarket extends Savings implements Depositable
 		super.incBalance(super.getBalance() * iRate);
 	}
 
-	@Override
-	public String getAccountType()
-	{
-		if (this instanceof MoneyMarket) return "MoneyMarket";
-		return null;
-	}
-
 }

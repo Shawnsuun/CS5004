@@ -31,15 +31,18 @@ public abstract class Account
 	
 	public String getAccountType()
 	{
+		if (this instanceof MoneyMarket) return "MoneyMarket";
+		if (this instanceof InterestChecking) return "Interest Checking";
+		if (this instanceof Loan) return "Loan";
+		if (this instanceof Mortgage) return "Mortgage";
 		if (this instanceof Savings) return "Savings";
 		if (this instanceof Checking) return "Checking";
-		if (this instanceof Loan) return "Loan";
-		
+
 		return null;
 	}
 	
 	public String getAddress() {return address;}
 
 
-	public abstract void accumInterest();
+	public void accumInterest() {};
 }

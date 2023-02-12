@@ -7,7 +7,7 @@ public class Loan extends Account implements Payable
     public Loan()
     {
     	super();
-    	iRate = 001;
+    	iRate = .001;
     	len = 12;
     }
     
@@ -17,7 +17,5 @@ public class Loan extends Account implements Payable
         this.iRate = iRate;
         this.len = len;
     }
-
-
 
 }

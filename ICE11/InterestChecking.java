@@ -18,11 +18,4 @@ public class InterestChecking extends Savings
         return super.getBalance();
     }
 
-    @Override
-    public String getAccountType()
-    {
-        if (this instanceof InterestChecking) return "Interest Checking";
-
-        return null;
-    }
 }
