@@ -1,10 +1,28 @@
+/******
+ Name: Xiaowen Sun
+ Assignment: Lab_3
+ Date: 2023-02-13
+ Notes: The StoneBlockFactory class of the lab3
+ ******/
+
+/**
+ *  A stone block factory needs to have a resource bin
+ *  to store resources and implement the factory interface.
+ */
 public class StoneBlockFactory implements Factory {
     private Resource stoneBin;
 
+    /**
+     * Constructor takes no arguments to create a StoneBlockFactory
+     */
     public StoneBlockFactory() {
         this.stoneBin = new Resource(0, ResourceType.STONE);
     }
 
+    /**
+     * This method takes a resource object stores it in the inventory
+     * @param resource The resource object to be stored
+     */
     @Override
     public void takeResource(Object resource) {
         try {
@@ -26,6 +44,10 @@ public class StoneBlockFactory implements Factory {
         }
     }
 
+    /**
+     * This method is used to produce a block using the resources of inventory
+     * @return The produced block
+     */
     @Override
     public Block produce() {
         if (this.stoneBin.getAmount() >= Const.stoneBlockNeeded) {
@@ -35,6 +57,9 @@ public class StoneBlockFactory implements Factory {
         return null;
     }
 
+    /**
+     * This override method displays the inventory of factory.
+     */
     @Override
     public void displayInventory() {
         System.out.println((this.stoneBin.getAmount()));
