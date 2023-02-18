@@ -19,11 +19,20 @@ public class wordNode extends ListNode implements Sentence {
 
     @Override
     public String longestWord() {
-        return null;
+        if (this.next == null) {
+            return this.word;
+        }
+        if (this.word.length() > this.next.longestWord().length()) {
+            return this.word;
+        }
+        return this.next.longestWord();
     }
 
     @Override
     public Sentence clone() {
+        if (this.next == null) {
+            return new wordNode(this.word);
+        }
         return new wordNode(this.word, this.next.clone());
     }
 
@@ -31,18 +40,9 @@ public class wordNode extends ListNode implements Sentence {
     public Sentence merge(Sentence other) {
         if (this.next == null) {
             this.next = other.clone();
+            return this;
         }
         return new wordNode(this.word, this.next.merge(other));
     }
-
-    @Override
-    public void append(String word) {
-        if (this.next == null) {
-            this.next = new wordNode(word);
-            return;
-        }
-        this.next.append(word);
-    }
-
 
 }

@@ -10,7 +10,7 @@ public class punNode extends ListNode implements Sentence {
 
     @Override
     public int getNumberOfWords() {
-        if (this == null) {
+        if (this.next == null) {
             return 0;
         }
         return this.next.getNumberOfWords();
@@ -18,7 +18,10 @@ public class punNode extends ListNode implements Sentence {
 
     @Override
     public String longestWord() {
-        return null;
+        if (this.next == null) {
+            return "";
+        }
+        return this.next.longestWord();
     }
 
     @Override
@@ -33,16 +36,9 @@ public class punNode extends ListNode implements Sentence {
     public Sentence merge(Sentence other) {
         if (this.next == null) {
             this.next = other.clone();
+            return this;
         }
         return new punNode(this.word, this.next.merge(other));
     }
 
-    @Override
-    public void append(String pun) {
-        if (this.next == null) {
-            this.next = new punNode(pun);
-            return;
-        }
-        this.next.append(pun);
-    }
 }
