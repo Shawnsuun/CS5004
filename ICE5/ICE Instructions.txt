@@ -1,0 +1,47 @@
+
+The following is meant to help you better understand the demonstration code so you can
+more easily complete the lab assignment and help prepare you for the next lecture. 
+
+Trace the code: Walkthrough and discuss what happens at each of the below starting points. 
+Try drawing out the linked list on a whiteboard or a piece of paper and follow along 
+with what happens. 
+
+Submit a brief description of each including some narrative about the flow of control from 
+each starting point.
+
+Main: Line 20   //create a new monsterlist instance, which its data is an EmptyNode
+Main: Line 26   //create a new Goblin, add this monster to the head of the data of the mList
+Main: Line 28   //print the count of non-empty node in the data of the mList
+Main: Line 29   //print the count of non-empty node in the data of the mList
+Main: Line 33   //print 2nd(index 1) node's moster in the data of the mList
+Main: Line 39   //print first node with zombie moster in the data of the mList
+Main: Line 43   //print all monsters in the data of the mList from head to tail
+
+Then, answer these questions
+
+How is printing the entire list accomplished?
+/**
+ * by recursion, base case is the EmptyNode.
+ */
+What is the difference in count1() and count2() (Be specific)?
+/** 
+ * count1 do not need a parameter, the length of list is added in the return value; 
+ * count2 need a counter parameter, the length of list is updated in the counter and
+ * the counter is returned in the basecase
+ */
+What is the purpose of the MonsterTest interface?
+/**
+ * the MonsterTest interface defines the method to test if it is a certain type of monster
+ * it could implemented differently by different classes such as ZombieTest, GoblinTest.
+ */
+How does MonsterTest help satisfy the Open/Closed principle mentioned in class?
+/**
+ * software should open for extension but closed for modification
+ * if we want to add another implementation of MonsterTest, no need to revise the interface
+ * just add additional class to implement the interface differently
+ */
+What would you need to do if you wanted to create a list of only Goblins?
+/**
+ * Create a GoblinNode class implements MonsterNode interface
+ */
+
